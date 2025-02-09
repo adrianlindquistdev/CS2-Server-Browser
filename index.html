@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CS2 Server Browser</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #111;
+            color: #fff;
+        }
+        header {
+            background-color: #222;
+            padding: 10px;
+            text-align: center;
+        }
+        h1 {
+            font-size: 2em;
+            margin: 0;
+        }
+        .server-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+        .server-item {
+            background-color: #333;
+            margin: 10px;
+            padding: 15px;
+            border-radius: 8px;
+            width: 200px;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+        }
+        .server-item h3 {
+            margin: 10px 0;
+            font-size: 1.2em;
+        }
+        .join-btn {
+            background-color: #28a745;
+            padding: 8px 15px;
+            border: none;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+        .join-btn:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>CS2 Server Browser</h1>
+    </header>
+
+    <div class="server-list">
+        <!-- Example server card -->
+        <div class="server-item">
+            <h3>Server 1</h3>
+            <p>Map: Nuke</p>
+            <!-- Button that triggers a JavaScript function to open the Steam connection -->
+            <button class="join-btn" onclick="joinServer('65.21.224.237:10280')">Join Server</button>
+        </div>
+
+        <!-- More server items can be added dynamically -->
+    </div>
+
+    <script>
+        // Function to open the steam://connect link when the button is clicked
+        function joinServer(serverAddress) {
+            const steamLink = `steam://connect/${serverAddress}`;
+            window.location.href = steamLink;
+        }
+    </script>
+</body>
+</html>
