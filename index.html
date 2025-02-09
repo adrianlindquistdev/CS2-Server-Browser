@@ -65,6 +65,7 @@
         <div class="server-item">
             <h3>Server 1</h3>
             <p>Map: Nuke</p>
+            <p>Not up</p>
             <!-- Button that triggers a JavaScript function to open the Steam connection -->
             <button class="join-btn" onclick="joinServer('65.21.224.237:10280')">Join Server</button>
         </div>
@@ -75,7 +76,7 @@
     <script>
         // Function to open the steam://connect link when the button is clicked
         function joinServer(serverAddress) {
-            const steamLink = `steam://connect/${serverAddress}`;
+            const steamLink = `steam://connect/65.21.224.237:10070${serverAddress}`;
             window.location.href = steamLink;
         }
     </script>
